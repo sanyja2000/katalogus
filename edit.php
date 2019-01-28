@@ -124,8 +124,9 @@ else
 		$termekid = $_POST["szerkesztes"];
 		//Lekerjuk a szerkeszteni kivant cikk adatait
 		$cikk = pg_fetch_row(pg_query($db, "select id, nev, ar, kep, leiras, raktaron from cikkek where id=$termekid"));
-		//Ha a termek raktaron van, akkor bepipaljuk a checkboxot
+		
 		if($cikk[5]=="t"){
+			//Ha a termek raktaron van, akkor bepipaljuk a checkboxot
 			$raktaron = "checked";
 		}else{
 			$raktaron = "";
@@ -176,6 +177,7 @@ else
 	}
 
 	if(isset($_POST["frissit"]) and is_numeric($_POST['frissit'])){
+		//Ha az elozo(szerkesztes) form elkuldte az adatokat, akkor megprobaljuk atirni az adatbazisban
 		$termekid = $_POST["frissit"];
 		$termeknev = $_POST["termeknev"];
 		$ar = $_POST["ar"];
@@ -211,6 +213,8 @@ else
 
 
 	if(isset($_POST["torles"]) and is_numeric($_POST["torles"])){
+		//Ha a torles gombra kattintunk az admin.php feluleten, akkor ez az if fog lefutni
+		//Ez megprobalja torolni az adatbazisbol a cikket
 		$termekid = $_POST["torles"];
 		pg_query($db, "DELETE from cikkek WHERE id='$termekid'");
 		echo "<div class='container col-6'><form action='admin.php' method='post'>
@@ -227,6 +231,8 @@ else
 	}
 
 	if(isset($_POST["hozzaadas"])){
+		//A hozzaadas gombra kattintva megjelenitunk egy feluletet
+		//ahol a hozzaadni kivant cikk tulajdonsagait adhatjuk meg
 		echo "<div class='container col-6 border border-secondary rounded' style='padding:2rem;'>
 		<h3 class='text-center'>Termék hozzáadása</h3>
 		
@@ -268,11 +274,14 @@ else
 	}
 
 	if(isset($_POST["rogzit"]) and is_numeric($_POST['rogzit'])){
+		//Ha az elozo(hozzaadas) feluletet kitoltve a Letrehozas gombra kattintunk
+		//akkor az alabbi kod megprobalja az adatbazishoz hozzaadni a cikket
 		$termeknev = $_POST["termeknev"];
 		$ar = $_POST["ar"];
 		$uploadResult = uploadFile($_FILES["ujKep"]);
 		$leiras = $_POST["leiras"]; 
 		if(isset($_POST["raktaron"]) and $_POST["raktaron"]=="on"){
+			//Ha a raktaron checkbox be van pipalva, akkor 1-est irunk az adatbazis raktaron oszlopaba
 			$raktaron = "1";
 		}
 		else{
@@ -280,12 +289,14 @@ else
 		}
 		if($uploadResult)
 		{
+			//Ha a kepfeltoltes fuggveny hiba nelkul lefut, akkor beleirjuk a kep nevet is az adatbazisba
 			$kep = $_FILES["ujKep"]["name"];
 			$hozzaad = pg_prepare($db,'rogzit', "INSERT INTO cikkek (nev,ar,kep,leiras,raktaron) VALUES($1,$2,$3,$4,$5)");
 			$hozzaad = pg_execute($db, 'rogzit', array($termeknev,$ar,'images/'.$kep,$leiras,$raktaron));
 		}
 		else
 		{
+			//Ellenkezo esetben nem, visszadobva egy figyelmezteto uzenetet
 			echo "<div class='alert alert-danger'>Nem adott képet a feltöltéshez</div>";
 			$hozzaad = pg_prepare($db,'rogzit', "INSERT INTO cikkek (nev,ar,leiras,raktaron) VALUES($1,$2,$3,$4)");
 			$hozzaad = pg_execute($db, 'rogzit', array($termeknev,$ar,$leiras,$raktaron));
