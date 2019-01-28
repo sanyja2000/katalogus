@@ -1,0 +1,31 @@
+id,nev,ar,kep,leiras,raktaron
+5,Nokia 7.1 32GB Dual,84600,images/nokia_7_1.jpg,"<b>Processzor:</b> Qualcomm Snapdragon 636<br>
+<b>RAM:</b> 3GB<br>
+<b>Belsõ memória mérete:</b> 32GB<br>
+<b>Kijelzõ mérete:</b> 5.84 inch<br>",f
+7,Apple iPhone XR 64GB,258990,images/iphone_xr.jpg,"<b>Processzor:</b>  Apple A12 Bionic<br>
+<b>RAM:</b> 3 GB<br>
+<b>Belsõ memória mérete:</b> 64 GB<br>
+<b>Memória bõvíthetõ:</b> Nem<br>
+<b>Kijelzõ mérete:</b> 6.1 inch<br>
+<b>Kijelzõ felbontása:</b> 1792 x 828 pixel",f
+8,OnePlus 6T 128GB 8GB RAM,189900,images/oneplus_6t_big.png,"<b>Processzor típusa:</b> Qualcomm Snapdragon 845<br>
+<b>RAM: </b>8 GB<br>
+<b>Belsõ memória mérete:</b> 128 GB<br>
+<b>Kijelzõ mérete:</b> 6.41 inch<br>
+<b>Kijelzõ felbontása:</b> 2340 x 1080 pixel<br>
+<b>Akkumulátor kapacitás:</b> 3700 mAh
+",t
+3,Huawei P20 Lite 64GB Dual,81200,images/p20_lite.jpg,"<b>Processzor:</b> HiSilicon Kirin 659<br>
+<b>RAM:</b> 4GB<br>
+<b>Belsõ memória mérete:</b> 64GB<br>
+<b>Memória bõvíthetõ:</b> Igen<br>
+<b>Kijelzõ mérete:</b> 5.84 inch<br>
+<b>Kijelzõ felbontása:</b> 2280 x 1080 pixel<br>
+<b>Csatlakozók:</b> USB Type-C, 3,5 Jack fülhallgató kimenet",t
+1,Samsung Galaxy S8 64GB,140990,images/galaxy_s8.jpg,"<b>Processzor:</b> Samsung Exynos 9 Octa 8895<br>
+<b>RAM:</b> 4GB<br>
+<b>Belsõ memória mérete:</b> 64GB<br>
+<b>Kijelzõ mérete:</b> 5.8 inch",t
+4,Xiaomi Mi Mix 3 128GB 6GB RAM,159300,images/mi_mix_3.jpg,<b>Processzor:</b> Qualcomm Snapdragon 845<br><b>RAM:</b> 6GB<br><b>Belsõ memória mérete:</b> 128GB<br><b>Kijelzõ mérete:</b> 6.39 inch,t
+2,Huawei Mate 20 Pro 128GB,312990,images/mate_20_pro.jpg,<b>Processzor:</b> HiSilicon Kirin 980<br><b>RAM:</b> 6GB<br><b>Belsõ memória mérete:</b> 128GB<br><b>Kijelzõ mérete:</b> 6.39 inch,t
