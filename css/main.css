@@ -1,0 +1,82 @@
+.container {
+	margin-top:0.5rem;
+}
+
+.card{
+	margin:0.4rem;
+}
+.form-control,.input-group-text{
+	margin-top: 1rem;
+}
+input[name='raktaron']{
+	margin-top: 1rem;
+	margin-left:0.3rem;
+	margin-right: 0.5rem;
+
+}
+
+.szures,.rendezes {
+	margin: 1em auto 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+	.rendezes {
+		margin: 0;
+	}
+	.szures{
+		display:block;
+	}
+	.termek{
+		margin:0 auto;
+	}
+	.display-4{
+		font-size: 180%;
+	}
+}
+input[type="number"] {
+	text-align: right;
+}
+
+.termek .card-header, .termek .card-footer{
+	background: #F8F9FB;
+}
+.szures{
+	margin-bottom: 1rem;
+}
+
+
+div.loginform{
+	margin:0 auto !important;
+}
+div.loginform h4{
+	margin-top: 1rem !important;
+}
+div.loginform button{
+	margin-top: 2rem ;
+}
+
+
+.termekkezelo h3{
+	margin:1rem;
+}
+.termekkezelo hr{
+	width:80%;
+}
+.termekkezelo img{
+	width:5rem;
+}
+.termekkezelo table tbody tr{
+	background-color: #f8f9fa;
+    transition: background-color 0.3s ease-out;
+}
+
+.termekkezelo table tbody tr:hover{
+	background-color: #e8e9ea;
+}
+
+.termekkezelo .keresesgomb {
+	margin:0 0.3rem;
+}
+.hidden{
+	display: none!important;
+}
